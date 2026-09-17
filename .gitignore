@@ -1,0 +1,15 @@
+# Nix
+result*
+
+# Java
+target/
+
+# Misc
+.direnv
+
+# maven
+.project
+.mvn
+target
+
+.settings
