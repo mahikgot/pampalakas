@@ -3,6 +3,7 @@ result*
 
 # Java
 target/
+.classpath
 
 # Misc
 .direnv
