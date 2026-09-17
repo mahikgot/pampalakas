@@ -1,6 +1,6 @@
 # Trigger a real StackOverflowError
 
-- STATUS: OPEN
+- STATUS: CLOSED
 - PRIORITY: 100
 - TAGS: jvm
 
@@ -38,8 +38,9 @@ Integer has 12 bytes of metadata and 4 bytes of data
 
 an arraylist has itself and points to an array with references to the objects
 
-so it is 64bytes(ArrayList object) + (8*4)(array metadata) + (8*N) + (objectSize*N)
+so it is 64bytes(ArrayList object) + (8*4)(array metadata) + (4*N) + (objectSize*N)
+//4N could be 8N if we are not using compressed oops
+so we are adding 20bytes to memory every time we add an integer to an ArrayList
 
-if we add an integer to an arraylist, we add a total of 24 bytes (array reference+integersize)
 java heap:
 https://developer.ibm.com/articles/j-codetoheap/
