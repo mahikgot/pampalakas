@@ -1,0 +1,9 @@
+import java.util.Scanner;
+public class r2 {
+  public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    int r1 = in.nextInt();
+    int s = in.nextInt();
+    System.out.print(2*s - r1);
+  }
+}
